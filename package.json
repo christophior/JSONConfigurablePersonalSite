@@ -1,7 +1,7 @@
 {
-  "name": "christophior",
+  "name": "JSONConfigurablePersonalSite",
   "version": "1.0.0",
-  "description": "Personal website of Herald Christophior Villarreal; http://www.christophior.com",
+  "description": "Personal website completely configurable by JSON",
   "main": "app.js",
   "dependencies": {
     "dustjs-linkedin": "^2.7.2",
@@ -18,12 +18,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/christophior/christophior.com.git"
+    "url": "https://github.com/christophior/JSONConfigurablePersonalSite.git"
   },
-  "author": "Herald Chris Villarreal",
+  "author": "Herald Christophior Villarreal",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/christophior/christophior.com/issues"
+    "url": "https://github.com/christophior/JSONConfigurablePersonalSite/issues"
   },
-  "homepage": "https://github.com/christophior/christophior.com"
+  "homepage": "https://github.com/christophior/JSONConfigurablePersonalSite"
 }
