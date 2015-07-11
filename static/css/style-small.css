@@ -1,0 +1,49 @@
+html {
+    height: auto;
+}
+
+hr {
+    height: 1.75em;
+    margin-top: 1.75em;
+}
+
+body.landing {
+    height: auto;
+}
+
+body.landing:before {
+    display: none;
+}
+
+body.landing #wrapper {
+    width: 100%;
+    padding: 3em 2em;
+}
+
+body.landing #wrapper header h1 {
+    font-size: 4em;
+}
+
+body.landing #wrapper header p {
+    margin: 1em 0;
+}
+
+body.landing #footer {
+    position: relative;
+}
+
+body.modal {
+    height: auto;
+}
+
+body.modal:before {
+    display: none;
+}
+
+body.modal #wrapper {
+    padding: 6em 2em 2em 2em;
+}
+
+body.modal #footer {
+    position: relative;
+}

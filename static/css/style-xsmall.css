@@ -1,0 +1,12 @@
+ul.icons {
+    cursor: default;
+}
+
+ul.icons li {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+ul.links li {
+    display: block;
+}

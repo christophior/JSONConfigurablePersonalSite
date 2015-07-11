@@ -1,0 +1,29 @@
+{
+  "name": "christophior",
+  "version": "1.0.0",
+  "description": "Personal website of Herald Christophior Villarreal; http://www.christophior.com",
+  "main": "app.js",
+  "dependencies": {
+    "dustjs-linkedin": "^2.7.2",
+    "ejs": "~1.0.0",
+    "express": "~4.0.0",
+    "express-dustjs": "^1.1.0",
+    "path": "~0.4.9",
+    "util": "~0.10.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/christophior/christophior.com.git"
+  },
+  "author": "Herald Chris Villarreal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/christophior/christophior.com/issues"
+  },
+  "homepage": "https://github.com/christophior/christophior.com"
+}

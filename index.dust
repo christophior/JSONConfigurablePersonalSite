@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>{siteTitle}</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="{siteDescription}" />
+		<meta name="keywords" content="" />
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/init.js"></script>
+		<script src="js/zoom.min.js"></script>
+		<script src="js/transition.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+		<noscript>
+	        <link rel="stylesheet" type="text/css" href="css/foundation-icons.css" />
+	        <link rel="stylesheet" type="text/css" href="css/skel.css" />
+			<link rel="stylesheet" type="text/css" href="css/style.css" />
+			<link rel="stylesheet" type="text/css" href="css/icons.css" />
+			<link rel="stylesheet" type="text/css" href="css/style-xlarge.css" />
+			<link rel="stylesheet" type="text/css" href="css/zoom.css" />
+		</noscript>
+	</head>
+	<body class="landing">
+		<div id="wrapper">
+			<header id="header">
+				<div class="avatar"></div>
+				<p>{description}</p>
+			</header>
+			<ul class="icons">
+				{#icons}
+					<li><a href="{link}" class="icon icon-{icon}"></a></li>
+				{/icons}
+			</ul>
+			<hr />
+			<ul class="links">
+				{#projects}
+					<li><a href="{link}">{title}</a></li>
+				{/projects}
+			</ul>
+		</div>
+		<footer id="footer"></footer>
+		<div id="bg"></div>
+	</body>
+</html>
