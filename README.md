@@ -3,8 +3,8 @@ JSON Configurable Personal Site
 
 ## Running
 ```
-git clone https://github.com/christophior/christophior.com.git site
-cd site
+git clone https://github.com/christophior/JSONConfigurablePersonalSite.git
+cd JSONConfigurablePersonalSite
 npm install
 npm start
 ```
