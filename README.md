@@ -81,3 +81,9 @@ For images such as your avatar, site background, etc. you can either use a URL f
   "background": "/img/background.jpg",
 ~~~
 You can also go to */static/img* and replace the *avatar.jpg* and *background.jpg* files with the images you wish to use and leave the default URLs in place.
+
+## Contribute
+Have an idea to make this app better? Fork this repo and play around with it, make it better and if you think you have something worth sharing make a pull request to the **develop** branch on this repository. 
+
+
+#### **Weirdly written in Austin, Texas!**
