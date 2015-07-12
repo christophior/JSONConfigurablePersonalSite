@@ -1,6 +1,8 @@
+/*jslint node: true */
+'use strict';
+
 var request = require('supertest'),
     app = require('../app.js'),
-    dd = require('data-driven'),
     links = require('../links.json');
 
 describe('GET /', function() {
@@ -35,15 +37,19 @@ describe('GET /background', function() {
     });
 });
 
-describe('GET links from links.json:', function() {
-    for (var path in links){
-        it('/'+path+' should redirect to ' + links[path], function(done) {
+function linkTest(path, url) {
+    describe('GET /'+path+' from links.json:', function () {
+        it('should redirect to '+url+' and return 302 REDIRECT', function (done) {
             request(app)
                 .get('/' + path)
                 .expect(302, done);
-        })
-    }
-});
+        });
+    });
+}
+
+for (var path in links){
+    linkTest(path, links[path]);
+}
 
 describe('GET /somerandompath', function() {
     it('should redirect to /', function(done) {

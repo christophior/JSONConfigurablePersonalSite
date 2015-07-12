@@ -14,8 +14,13 @@
   },
   "scripts": {
     "start": "node app.js",
-    "test": "mocha"
+    "test": "mocha",
+    "jshint": "jshint -c .jshintrc --exclude-path .jshintignore"
   },
+  "pre-commit": [
+    "jshint",
+    "test"
+  ],
   "dependencies": {
     "dustjs-linkedin": "^2.7.2",
     "ejs": "~1.0.0",
@@ -26,7 +31,9 @@
   },
   "devDependencies": {
     "data-driven": "^1.2.0",
+    "jshint": "^2.8.0",
     "mocha": "^2.2.5",
+    "pre-commit": "^1.0.10",
     "supertest": "^1.0.1"
   },
   "license": "MIT"
