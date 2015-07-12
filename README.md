@@ -75,7 +75,7 @@ To update the site's favicon you will need to replace the **favicon.ico** file t
 For some reason the app seems to automatically pick up the favicon.ico file.
 
 ### **Images**
-For images such as your avatar, site background, etc. you can either use a URL for an image that is served somewhere else online or use a relative path just the following
+For images such as your avatar, site background, etc. you can either use a URL for an image that is served somewhere else online or use a relative path like the following
 ~~~
   "avatar": "/img/avatar.jpg",
   "background": "/img/background.jpg",
