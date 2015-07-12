@@ -1,8 +1,26 @@
 {
   "name": "JSONConfigurablePersonalSite",
   "version": "1.0.0",
+  "author": "Herald Christophior Villarreal",
+  "homepage": "https://github.com/christophior/JSONConfigurablePersonalSite",
   "description": "Personal website completely configurable by JSON",
   "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/christophior/JSONConfigurablePersonalSite.git"
+  },
+  "bugs": {
+    "url": "https://github.com/christophior/JSONConfigurablePersonalSite/issues"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "test": "mocha",
+    "jshint": "jshint -c .jshintrc --exclude-path .jshintignore"
+  },
+  "pre-commit": [
+    "jshint",
+    "test"
+  ],
   "dependencies": {
     "dustjs-linkedin": "^2.7.2",
     "ejs": "~1.0.0",
@@ -11,19 +29,12 @@
     "path": "~0.4.9",
     "util": "~0.10.3"
   },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+  "devDependencies": {
+    "data-driven": "^1.2.0",
+    "jshint": "^2.8.0",
+    "mocha": "^2.2.5",
+    "pre-commit": "^1.0.10",
+    "supertest": "^1.0.1"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/christophior/JSONConfigurablePersonalSite.git"
-  },
-  "author": "Herald Christophior Villarreal",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/christophior/JSONConfigurablePersonalSite/issues"
-  },
-  "homepage": "https://github.com/christophior/JSONConfigurablePersonalSite"
+  "license": "MIT"
 }

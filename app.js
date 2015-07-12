@@ -1,5 +1,7 @@
+/*jslint node: true */
+'use strict';
+
 var express  = require('express'),
-    http = require('http'),
     path = require('path'),
     app = express(),
     dust = require('express-dustjs'),
@@ -8,7 +10,7 @@ var express  = require('express'),
 
 // Dustjs settings
 dust._.optimizers.format = function (ctx, node) {
-    return node
+    return node;
 };
 
 app.engine('dust', dust.engine({
@@ -31,18 +33,18 @@ app.get('/resume', function(request, response) {
 });
 
 app.get('/avatar', function(request, response) {
-    response.redirect(requiredInfo['avatar']);
+    response.redirect(requiredInfo.avatar);
 });
 
 app.get('/background', function(request, response) {
-    response.redirect(requiredInfo['background']);
+    response.redirect(requiredInfo.background);
 });
 
 /**
  * If URL path is found in links.json then redirect
  * else handle 404s by redirecting to home page
  * */
-app.get('*', function (request, response, next){
+app.get('*', function (request, response){
     var requestedPath = (request.path).replace('/', '').toLowerCase();
     if (links[requestedPath]) {
         response.redirect(links[requestedPath]);
@@ -53,3 +55,5 @@ app.get('*', function (request, response, next){
 
 console.log('Server started on http://localhost:8080');
 app.listen(process.env.PORT || 8080);
+
+module.exports = app;
