@@ -1,7 +1,8 @@
-[![Build Status](https://travis-ci.org/christophior/JSONConfigurablePersonalSite.svg?branch=develop)](https://travis-ci.org/christophior/JSONConfigurablePersonalSite)
-
 JSON Configurable Personal Site
 ======================
+
+[![Build Status](https://travis-ci.org/christophior/JSONConfigurablePersonalSite.svg?branch=develop)](https://travis-ci.org/christophior/JSONConfigurablePersonalSite)
+
 
 ## Running
 ```
