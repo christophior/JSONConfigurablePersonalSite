@@ -1,0 +1,6 @@
+{
+  "name": "JSONConfigurablePersonalSite",
+  "description": "Personal website completely configurable by JSON",
+  "repository": "https://github.com/christophior/JSONConfigurablePersonalSite",
+  "keywords": ["node", "express", "static"]
+}
