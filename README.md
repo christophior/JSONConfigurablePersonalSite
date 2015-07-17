@@ -4,6 +4,9 @@ JSON Configurable Personal Site
 [![Build Status](https://travis-ci.org/christophior/JSONConfigurablePersonalSite.svg?branch=develop)](https://travis-ci.org/christophior/JSONConfigurablePersonalSite)
 
 
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+
+
 ## Running
 ```
 git clone https://github.com/christophior/JSONConfigurablePersonalSite.git
