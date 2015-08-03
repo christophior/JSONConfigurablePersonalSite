@@ -28,30 +28,123 @@
     <div id="content-wrapper">
       <div class="inner clearfix">
         <section id="main-content">
-          <h3>
-<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+          <h2>
+<a id="deploying" class="anchor" href="#deploying" aria-hidden="true"><span class="octicon octicon-link"></span></a>Deploying</h2>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here <a href="https://guides.github.com/features/mastering-markdown/">using GitHub Flavored Markdown</a>, select a template crafted by a designer, and publish. After your page is generated, you can check out the new <code>gh-pages</code> branch locally. If you’re using GitHub for Mac or GitHub for Windows, simply sync your repository and you’ll see the new branch.</p>
+<p>To deploy to Heroku using one-click deploy head over to the repo's Github page using the button above!</p>
+
+<h2>
+<a id="running" class="anchor" href="#running" aria-hidden="true"><span class="octicon octicon-link"></span></a>Running</h2>
+
+<pre><code>git clone https://github.com/christophior/JSONConfigurablePersonalSite.git
+cd JSONConfigurablePersonalSite
+npm install
+npm start
+</code></pre>
+
+<p>the application will be running on http://localhost:8080</p>
+
+<h2>
+<a id="configuring-your-own-site" class="anchor" href="#configuring-your-own-site" aria-hidden="true"><span class="octicon octicon-link"></span></a>Configuring your own site</h2>
+
+<p>To configure your own website after cloning this repo you will only need to work with these two files:</p>
 
 <h3>
-<a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+<a id="requiredinfojson" class="anchor" href="#requiredinfojson" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>requiredInfo.json</strong>
+</h3>
 
-<p>We’ve crafted some handsome templates for you to use. Go ahead and click 'Continue to layouts' to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved.</p>
+<p>This file will be where you will put what I would consider required information to make your personal site as 'complete' as possible. </p>
+
+<p>Data stored in this file includes site title, site description, personal photograph (avatar), site background, description displayed on the home page, PDF link to your resume, list of shared links with icons, and list of projects along with the projects title.</p>
+
+<h4>
+<a id="icons" class="anchor" href="#icons" aria-hidden="true"><span class="octicon octicon-link"></span></a>icons</h4>
+
+<p>In <strong>requiredInfo.json</strong> there is a section called <strong>icons</strong> that looks like the following:</p>
+
+<pre><code>"icons": [
+    {"icon": "page", "link": "/resume"},
+    {"icon": "social-github", "link": "http://github.com/christophior"},
+    {"icon": "social-linkedin", "link": "/linkedin"},
+    {"icon": "mail", "link": "/email"}
+  ]
+</code></pre>
+
+<p>In the code above we are specifying the icons that link to sites such as your Github, LinkedIn, Twitter, etc. along with an icon that will be used for the respective link. Each entry in the icons array requires an icon value and a link value.</p>
+
+<p>Icons and icon names are consistent with the <a href="http://zurb.com/playground/foundation-icon-fonts-3#allicons">Foundation Icon Font</a> which can be found here: <strong><a href="http://zurb.com/playground/foundation-icon-fonts-3#allicons">Foundation Icons</a></strong>. </p>
+
+<p>Links for our icons can either be relative links based on entries that you have added to your <strong>links.json</strong> file (<em>like  the resume/linkedin/email icon</em>) or absolute links (<em>like the Github icon</em>).</p>
+
+<h4>
+<a id="projects" class="anchor" href="#projects" aria-hidden="true"><span class="octicon octicon-link"></span></a>projects</h4>
+
+<p>Projects are similar to icons except that they have different attributes, the following is an example of projects:</p>
+
+<pre><code>"projects": [
+    {"title":"Dogecoin Ticker", "link":"/dogecointicker"}
+  ]
+</code></pre>
+
+<p>Projects require a title and a link. </p>
+
+<p>Project titles are what will be shown on your website. Links just like icons can be either relative or absolute.</p>
 
 <h3>
-<a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span class="octicon octicon-link"></span></a>Creating pages manually</h3>
+<a id="linksjson" class="anchor" href="#linksjson" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>links.json</strong>
+</h3>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<p>This file is where you will specify links that will redirect when you go to certain paths in your site. By default the / path is your home page which will show your home page which will be populated with the info you have provided in your <strong>requiredInfo.json</strong> file. </p>
+
+<p>/resume is also taken up by default, this path will grab your resume PDF that you specified under the <em>resumeFile</em> attribute in <strong>requiredInfo.json</strong></p>
+
+<pre><code>{
+  "dogecointicker": "https://play.google.com/store/apps/details?id=christophior.dogecointicker.app",
+  "gist": "https://gist.github.com/christophior",
+  "github": "http://github.com/christophior",
+  "linkedin": "https://www.linkedin.com/in/christophior"
+}
+</code></pre>
+
+<p>The following file shows all the specified paths along with the links that they will redirect to when visited. If a path that is not specified in <strong>links.json</strong> or in <strong>app.js</strong> (initially just /resume) then it will by default redirect back to the site's root</p>
+
+<p><a href="http://www.christophior.com/github">http://www.christophior.com/github</a> -&gt; <a href="http://github.com/christophior">http://github.com/christophior</a></p>
+
+<p><a href="http://www.christophior.com/gist">http://www.christophior.com/gist</a> -&gt; <a href="https://gist.github.com/christophior">https://gist.github.com/christophior</a></p>
+
+<p><a href="http://www.christophior.com/randompath">http://www.christophior.com/randompath</a> -&gt; <a href="http://www.christophior.com/">http://www.christophior.com/</a></p>
+
+<h2>
+<a id="miscellaneous" class="anchor" href="#miscellaneous" aria-hidden="true"><span class="octicon octicon-link"></span></a>Miscellaneous</h2>
 
 <h3>
-<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+<a id="favicon" class="anchor" href="#favicon" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>Favicon</strong>
+</h3>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor’s GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<p>To update the site's favicon you will need to replace the <strong>favicon.ico</strong> file that is present in <em>/static/img/</em>. </p>
+
+<p>For some reason the app seems to automatically pick up the favicon.ico file.</p>
 
 <h3>
-<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+<a id="images" class="anchor" href="#images" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>Images</strong>
+</h3>
 
-<p>Having trouble with Pages? Check out our <a href="https://help.github.com/pages">documentation</a> or <a href="https://github.com/contact">contact support</a> and we’ll help you sort it out.</p>
+<p>For images such as your avatar, site background, etc. you can either use a URL for an image that is served somewhere else online or use a relative path like the following</p>
+
+<pre><code>  "avatar": "/img/avatar.jpg",
+  "background": "/img/background.jpg",
+</code></pre>
+
+<p>You can also go to <em>/static/img</em> and replace the <em>avatar.jpg</em> and <em>background.jpg</em> files with the images you wish to use and leave the default URLs in place.</p>
+
+<h2>
+<a id="contribute" class="anchor" href="#contribute" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contribute</h2>
+
+<p>Have an idea to make this app better? Fork this repo and play around with it, make it better and if you think you have something worth sharing make a pull request to the <strong>develop</strong> branch on this repository. </p>
+
+<h4>
+<a id="weirdly-written-in-austin-texas" class="anchor" href="#weirdly-written-in-austin-texas" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>Weirdly written in Austin, Texas!</strong>
+</h4>
         </section>
 
         <aside id="sidebar">
