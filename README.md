@@ -25,7 +25,7 @@ the application will be running on http://localhost:8080
 ## Configuring your own site
 To configure your own website after cloning this repo you will only need to work with these two files:
 
-### **requiredInfo.json**
+### **config/requiredInfo.json**
 This file will be where you will put what I would consider required information to make your personal site as 'complete' as possible. 
 
 Data stored in this file includes site title, site description, personal photograph (avatar), site background, description displayed on the home page, PDF link to your resume, list of shared links with icons, and list of projects along with the projects title.
@@ -58,7 +58,7 @@ Projects require a title and a link.
 Project titles are what will be shown on your website. Links just like icons can be either relative or absolute.
 
 
-### **links.json**
+### **config/links.json**
 This file is where you will specify links that will redirect when you go to certain paths in your site. By default the / path is your home page which will show your home page which will be populated with the info you have provided in your **requiredInfo.json** file. 
 
 /resume is also taken up by default, this path will grab your resume PDF that you specified under the *resumeFile* attribute in **requiredInfo.json**
@@ -84,7 +84,6 @@ The following file shows all the specified paths along with the links that they 
 ### **Favicon**
 To update the site's favicon you will need to replace the **favicon.ico** file that is present in */static/img/*. 
 
-For some reason the app seems to automatically pick up the favicon.ico file.
 
 ### **Images**
 For images such as your avatar, site background, etc. you can either use a URL for an image that is served somewhere else online or use a relative path like the following

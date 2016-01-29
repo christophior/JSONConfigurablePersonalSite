@@ -5,8 +5,8 @@ var express  = require('express'),
     path = require('path'),
     app = express(),
     dust = require('express-dustjs'),
-    links = require('./links'),
-    requiredInfo = require('./requiredInfo');
+    links = require('./config/links'),
+    requiredInfo = require('./config/requiredInfo');
 
 // Dustjs settings
 dust._.optimizers.format = function (ctx, node) {
