@@ -4,7 +4,7 @@ JSON Configurable Personal Site
 [![Build Status](https://travis-ci.org/christophior/JSONConfigurablePersonalSite.svg?branch=develop)](https://travis-ci.org/christophior/JSONConfigurablePersonalSite)
 
 ## Deploying
-To deploy to Heroku just click on the button below, login/register to Heroku and chose an app name. Once deployed the example app can be found at https://appname.herokuapp.com/
+To deploy to Heroku just click on the button below, login/register to Heroku and chose an app name. Once deployed the example app can be found at [https://appname.herokuapp.com/](http://jsonconfigurablepersonalsite.herokuapp.com/)
 
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
