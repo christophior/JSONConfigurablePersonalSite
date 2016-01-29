@@ -3,7 +3,7 @@
 
 var request = require('supertest'),
     app = require('../app.js'),
-    links = require('../links.json');
+    links = require('../config/links.json');
 
 describe('GET /', function() {
     it('should return 200 OK', function(done) {
