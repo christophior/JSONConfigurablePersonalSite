@@ -17,7 +17,7 @@ app.engine('dust', dust.engine({
     useHelpers: true
 }));
 app.set('view engine', 'dust');
-app.set('views', __dirname);
+app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'static')));
 app.use(express.static(path.join(__dirname, 'static/css')));
 app.use(express.static(path.join(__dirname, 'static/font')));
